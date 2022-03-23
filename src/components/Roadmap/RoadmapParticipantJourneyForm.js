@@ -82,7 +82,7 @@ const form = (props) => {
 
     return (
         <div>
-            <Box sx={{ marginTop: '3vh' }}
+            <Box sx={{ marginTop: '2vh' }}
                 autoComplete="off">
                 <Typography variant="h4" component="div" gutterBottom>
                     Roadmap Participant Journey
@@ -170,7 +170,7 @@ const form = (props) => {
                             />
                         </Grid>
 
-                        <Grid item xs={12}>
+                        <Grid item xs={6}>
                             <TextField
                                 variant="standard"
                                 name="mostRecentUpdate"
@@ -192,7 +192,7 @@ const form = (props) => {
                         </Grid>
 
                         
-                        <Grid item xs={12}>
+                        <Grid item xs={6}>
                             <DatePicker
                                 disableFuture
                                 label="Most recent update date"
@@ -203,12 +203,14 @@ const form = (props) => {
                                     <TextField {...params}
                                         id="mostRecentUpdateDate"
                                         name="mostRecentUpdateDate"
+                                        disabled="true"
                                         variant="standard"
                                         onChange={handleChange}
                                         onBlur={handleBlur}
                                         helperText={touched.mostRecentUpdateDate ? errors.mostRecentUpdateDate : ""}
                                         error={touched.mostRecentUpdateDate && Boolean(errors.mostRecentUpdateDate)}
-                                        fullWidth />}
+                                        fullWidth
+                                         />}
                             />
                         </Grid>
 
